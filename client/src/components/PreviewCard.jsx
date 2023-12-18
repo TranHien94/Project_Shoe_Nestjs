@@ -27,10 +27,11 @@ const PreviewCard = ({ shoe }) => {
   const desc = shoe.story_html;
   const name = shoe.name;
   const brand = shoe.brand_name;
-  const gender = shoe.gender[0];
+  const gender = shoe.gender;
 
 
-  const sizeRangeString = shoe.size_range || "[]";
+    const sizeRangeString = shoe.size_range || "[]";
+    console.log("sizeRangeString", sizeRangeString);
   let parsedSizeRange;
 
   

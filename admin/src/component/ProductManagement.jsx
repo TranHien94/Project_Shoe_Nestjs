@@ -56,6 +56,7 @@ const ProductManagement = () => {
     const closeModal = () => {
         setEditingProduct(null);
         setIsModalOpen(false);
+        fetchProducts();
     };
 
     return (

@@ -3,9 +3,9 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { LoginAdminDto } from './dto/login-admin.dto';
+import { LoginAdminDto } from '../../dto/login-admin.dto';
 import { AdminEntity } from './entity/admin.entity';
-import { AdminDto } from './dto/admin.dto';
+import { AdminDto } from '../../dto/admin.dto';
 import { comparePasswords } from 'src/shared/utils';
 import { toAdminDto, toUserDto } from 'src/shared/mapper';
 import { UserDto } from 'src/user/dto/user.dto';

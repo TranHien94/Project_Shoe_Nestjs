@@ -1,4 +1,4 @@
-import { AdminDto } from 'src/admin/dto/admin.dto';
+import { AdminDto } from 'dto/admin.dto';
 import { AdminEntity } from 'src/admin/entity/admin.entity';
 import { ProductDto } from 'src/product/dto/product.dto';
 import { ProductEntity } from 'src/product/entity/product.entity';
@@ -80,12 +80,12 @@ export const toProductDto = (data: ProductEntity): ProductDto => {
     story_html,
     upper_material,
   };
-  return productDto
-}
+  return productDto;
+};
 
 export const toUserDto = (data: UserEntity): UserDto => {
   const { id, username, password, email } = data;
-  const userDto: UserDto = { id, username,password, email };
+  const userDto: UserDto = { id, username, password, email };
   return userDto;
 };
 

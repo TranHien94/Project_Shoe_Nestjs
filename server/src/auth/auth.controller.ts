@@ -18,7 +18,7 @@ import { AuthService } from './auth.service';
 import { LoginStatus } from './interfaces/login-status.interface';
 import { JwtPayload } from './interfaces/payload.interface';
 import { RegistrationStatus } from './interfaces/regisration-status.interface';
-import { LoginAdminDto } from 'src/admin/dto/login-admin.dto';
+import { LoginAdminDto } from 'dto/login-admin.dto';
 import { UserDto } from 'src/user/dto/user.dto';
 import { Deletestatus } from './interfaces/delete-status.interface';
 

@@ -7,6 +7,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { setSearch } from "../redux/slices/SearchSlice";
 
 const Navbar = () => {
+    
     const cart = useSelector((state) => state.cart);
 
     const dispatch = useDispatch();

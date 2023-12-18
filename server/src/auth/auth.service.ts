@@ -7,12 +7,11 @@ import { UserService } from 'src/user/user.service';
 import { LoginStatus } from './interfaces/login-status.interface';
 import { JwtPayload } from './interfaces/payload.interface';
 import { RegistrationStatus } from './interfaces/regisration-status.interface';
-import { LoginAdminDto } from 'src/admin/dto/login-admin.dto';
+import { LoginAdminDto } from 'dto/login-admin.dto';
 import { AdminService } from 'src/admin/admin.service';
 import { UpdateStatus } from './interfaces/update-status.interface';
 import { Deletestatus } from './interfaces/delete-status.interface';
-import { AdminDto } from 'src/admin/dto/admin.dto';
-
+import { AdminDto } from 'dto/admin.dto';
 
 @Injectable()
 export class AuthService {
@@ -133,5 +132,3 @@ export class AuthService {
     };
   }
 }
-
-

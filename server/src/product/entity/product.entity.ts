@@ -4,28 +4,40 @@ import { Column, Entity, PrimaryColumn, PrimaryGeneratedColumn } from 'typeorm';
 export class ProductEntity {
   @PrimaryColumn('uuid')
   id: string;
+
   @Column({ name: 'box_condition', type: 'text', nullable: true })
   box_condition: string;
+
   @Column({ name: 'brand_name', type: 'text', nullable: true })
   brand_name: string;
+
   @Column({ name: 'category', type: 'text', nullable: true })
   category: string[];
+
   @Column({ name: 'collection_slugs', type: 'text', nullable: true })
   collection_slugs: string[];
+
   @Column({ name: 'color', type: 'text', nullable: true })
   color: string;
+
   @Column({ name: 'designer', type: 'text', nullable: true })
   designer: string;
+
   @Column({ name: 'details', type: 'text', nullable: true })
   details: string;
+
   @Column({ name: 'gender', type: 'text', nullable: true })
   gender: string[];
+
   @Column({ name: 'grid_picture_url', type: 'text', nullable: true })
   grid_picture_url: string;
+
   @Column({ name: 'has_picture', type: 'boolean', nullable: true })
   has_picture: boolean;
+
   @Column({ name: 'has_stock', type: 'boolean', nullable: true })
   has_stock: boolean;
+
   @Column({ name: 'keywords', type: 'text', nullable: true })
   keywords: string[];
 

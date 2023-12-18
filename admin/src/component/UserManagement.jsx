@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useId } from "react";
 import "./UserManagement.css";
 import Modal from "react-modal";
 import axios from "axios";
@@ -18,6 +18,7 @@ const UserManagement = () => {
     function closeModal() {
         setEditingUser(null);
         setIsModalOpen(false);
+        fetchUsers();
     }
     useEffect(() => {
         fetchUsers();
@@ -28,7 +29,7 @@ const UserManagement = () => {
                 `${import.meta.env.VITE_APP_SERVER_HOST_ADMIN}/users/`
             );
             setUsers(response.data.users);
-           // console.log("response.data", response.data.users);
+            // console.log("response.data", response.data.users);
             console.log("users", users);
         } catch (error) {
             console.error("Error fetching users:", error);
@@ -48,14 +49,15 @@ const UserManagement = () => {
                 console.error("Delete user fail:", response.data.message);
                 message.error(response.data.message);
             }
+            //setUsers(users.filter((user) => user.id !== userId));
         } catch (error) {
             console.error("Delete user fail:", error);
             message.error("Delete user failed");
         }
     };
-const handleEditUser = (user) => {
-    openModal(user);
-};
+    const handleEditUser = (user) => {
+        openModal(user);
+    };
     return (
         <div>
             <h2>User Management</h2>

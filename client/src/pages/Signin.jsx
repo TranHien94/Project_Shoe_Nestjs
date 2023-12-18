@@ -27,6 +27,7 @@ const LoginForm = () => {
             if (response.status === 200 || response.status === 201) {
                 dispatch(setLoginData(response.data));
                 message.success(response.data.message);
+               
                 navigate("/explore");
             } else {
                 console.error("Login failed:", response.data.message);
